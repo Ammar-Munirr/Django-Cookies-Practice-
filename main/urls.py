@@ -19,5 +19,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app1/',include('simple_cookie.urls'))
+    path('app1/',include('simple_cookie.urls')),
+    path('app2/',include('signed_cookie.urls'))
 ]
