@@ -10,3 +10,10 @@ def set_cookie(request):
 def get_cookie(request):
     name = request.COOKIES.get('name','Not Found')
     return render(request,'simple_cookie/get.html',{'name':name})
+
+
+
+def delete_cookie(request):
+    res = render(request,'simple_cookie/delete.html')
+    res.delete_cookie('name')
+    return res
